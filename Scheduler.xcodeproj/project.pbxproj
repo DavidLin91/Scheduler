@@ -15,8 +15,8 @@
 		5712588B2385A81000805579 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 571258892385A81000805579 /* LaunchScreen.storyboard */; };
 		571258932385AD0100805579 /* CreateEventController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571258922385AD0100805579 /* CreateEventController.swift */; };
 		571258952385B4BC00805579 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571258942385B4BC00805579 /* Event.swift */; };
-		6334235523D21067008E1BF9 /* FiletManager+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6334235423D21067008E1BF9 /* FiletManager+Extensions.swift */; };
 		6334235823D21D01008E1BF9 /* PersistenceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6334235723D21D01008E1BF9 /* PersistenceHelper.swift */; };
+		6334235B23D21EDF008E1BF9 /* FileManager+Extesions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6334235A23D21EDF008E1BF9 /* FileManager+Extesions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,8 +30,8 @@
 		5712588C2385A81000805579 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		571258922385AD0100805579 /* CreateEventController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEventController.swift; sourceTree = "<group>"; };
 		571258942385B4BC00805579 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
-		6334235423D21067008E1BF9 /* FiletManager+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FiletManager+Extensions.swift"; sourceTree = "<group>"; };
 		6334235723D21D01008E1BF9 /* PersistenceHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceHelper.swift; sourceTree = "<group>"; };
+		6334235A23D21EDF008E1BF9 /* FileManager+Extesions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager+Extesions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,8 +105,8 @@
 		6334235923D21D15008E1BF9 /* Data Persistence */ = {
 			isa = PBXGroup;
 			children = (
+				6334235A23D21EDF008E1BF9 /* FileManager+Extesions.swift */,
 				6334235723D21D01008E1BF9 /* PersistenceHelper.swift */,
-				6334235423D21067008E1BF9 /* FiletManager+Extensions.swift */,
 			);
 			path = "Data Persistence";
 			sourceTree = "<group>";
@@ -184,7 +184,7 @@
 			files = (
 				571258932385AD0100805579 /* CreateEventController.swift in Sources */,
 				571258832385A80D00805579 /* ScheduleListController.swift in Sources */,
-				6334235523D21067008E1BF9 /* FiletManager+Extensions.swift in Sources */,
+				6334235B23D21EDF008E1BF9 /* FileManager+Extesions.swift in Sources */,
 				6334235823D21D01008E1BF9 /* PersistenceHelper.swift in Sources */,
 				5712587F2385A80D00805579 /* AppDelegate.swift in Sources */,
 				571258812385A80D00805579 /* SceneDelegate.swift in Sources */,

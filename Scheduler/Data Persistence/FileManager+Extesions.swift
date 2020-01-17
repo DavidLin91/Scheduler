@@ -1,5 +1,5 @@
 //
-//  FiletManager+Extensions.swift
+//  FileManagerExtesions.swift
 //  Scheduler
 //
 //  Created by David Lin on 1/17/20.
@@ -9,7 +9,6 @@
 import Foundation
 
 extension FileManager {
-    
     
     // function gets URL path to documents directory
     // FileManager.getDocumentsDirectory()
