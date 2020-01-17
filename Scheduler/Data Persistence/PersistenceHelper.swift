@@ -13,6 +13,7 @@ enum dataPersistenceError: Error { // conforming to the Error Protocol
     case fileDoesNotExist(String)
     case noData
     case decodingError(Error)
+    case deletingError(Error)
 }
 
 class PersistenceHelper {
@@ -27,13 +28,23 @@ class PersistenceHelper {
     // create - save item to documents directory
     static func save(event: Event) throws {
         
-        // STEP 1
-        // get url to path to the file that the event will be saved to
-        let url = FileManager.pathToDocumentsDirectory(with: filename)
-        
         // STEP 2
         // append new event to the events array
         events.append(event)
+        
+        do {
+            try save()
+        } catch {
+            throw dataPersistenceError.savingError(error)
+        }
+    }
+    
+    
+    
+    private static func save() throws {
+        // STEP 1
+        // get url to path to the file that the event will be saved to
+        let url = FileManager.pathToDocumentsDirectory(with: filename)
         
         // events arrray will be object being converted to Data
         // we will use the Data object to and write (save) it to documents
@@ -50,7 +61,11 @@ class PersistenceHelper {
             // STEP 5
             throw dataPersistenceError.savingError(error)
         }
+        
+        
     }
+    
+    
     
     // read - load (retrieve) items from documents directory
     static func loadEvents() throws -> [Event] {
@@ -70,19 +85,29 @@ class PersistenceHelper {
             } else {
                 throw dataPersistenceError.noData
             }
-    } else {
+        } else {
             throw dataPersistenceError.fileDoesNotExist(filename)
+        }
+        return events
     }
-    return events
-}
-
-// update -
-
-
-
-
-// delete - remove item from documents directory
-
+    
+    // update -
+    
+    
+    
+    
+    // delete - remove item from documents directory
+    static func delete(event index: Int)  throws {
+        // remove the item from the events array
+        events.remove(at: index)
+        
+        //save our events array to the documents directory
+        do {
+            try save()
+        } catch {
+            throw dataPersistenceError.deletingError(error)
+        }
+    }
 }
 
 
